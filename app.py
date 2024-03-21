@@ -26,7 +26,8 @@ def read_sales_data(csv_file: str) -> List[Dict[str, Any]]:
         # Iterate through each row in the CSV file
         for row in reader:
             # Convert each row to a dictionary and append it to the sales_data list
-            sales_data.append(dict(row))
+            row: Dict[str, Any] = dict(row)
+            sales_data.append(row)
 
     # Return the list of sales data
     return sales_data
