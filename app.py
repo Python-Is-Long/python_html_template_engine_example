@@ -51,5 +51,5 @@ def generate_sales_report():
 
 
 if __name__ == "__main__":
-    # Run the Flask app in debug mode on port 5000
+    # Run the Flask app in debug mode on a selected port
     app.run(debug=True, port=5000)
