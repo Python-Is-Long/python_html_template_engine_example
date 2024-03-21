@@ -21,4 +21,4 @@ def generate_sales_report():
     return render_template('sales_report.html', sales_data=sales_data, total_sales=total_sales)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000)

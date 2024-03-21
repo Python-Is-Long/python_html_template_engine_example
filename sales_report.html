@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Report</title>
+</head>
+<body>
+    <h1>Sales Report</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>Sales</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in sales_data %}
+            <tr>
+                <td>{{ item.region }}</td>
+                <td>{{ item.sales }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Total Sales: {{ total_sales }}</p>
+</body>
+</html>
