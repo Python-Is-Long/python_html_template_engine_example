@@ -6,23 +6,35 @@
     <title>Sales Report</title>
 </head>
 <body>
+    <!-- Page Header -->
     <h1>Sales Report</h1>
+
+    <!-- Table for Sales Data -->
     <table border="1">
+        <!-- Table Header -->
         <thead>
             <tr>
+                <!-- Column Headers -->
                 <th>Region</th>
                 <th>Sales</th>
             </tr>
         </thead>
+        <!-- Table Body -->
         <tbody>
+            <!-- Loop through sales_data and generate rows -->
             {% for item in sales_data %}
             <tr>
+                <!-- Display region data for each row -->
                 <td>{{ item.region }}</td>
+                <!-- Display sales data for each row -->
                 <td>{{ item.sales }}</td>
             </tr>
+            <!-- End of loop -->
             {% endfor %}
         </tbody>
     </table>
+
+    <!-- Total Sales Information -->
     <p>Total Sales: {{ total_sales }}</p>
 </body>
 </html>
